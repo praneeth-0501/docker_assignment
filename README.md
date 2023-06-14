@@ -16,3 +16,26 @@ docker-compose up -d
 9. You can validate the entry by checking in postgres container also.
 
 <img width="461" alt="Screenshot 2023-06-13 at 12 01 11 PM" src="https://github.com/praneeth-0501/docker_assignment/assets/123532043/cd4c5407-d329-4bfe-acc1-75278acc082c">
+
+# Kubernetes task
+1. Initially create a yaml file for deployment of postgres container. Here, postgres pod is created with 1 replica and considering latest postgres image.
+2. By using kubectl command deploy the postgres pod.
+```
+kubectl apply -f postgresdb-deploy.yaml 
+```
+3. For connecting postgres and airflow install the dependencies in postgres container. Run below commands to open postgres container terminal.
+```
+minikube ssh
+docker ps
+docker exec -it <container> bin/bash
+```
+```
+apt-get -y update
+apt-get  -y install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev wget
+wget https://www.python.org/ftp/python/3.7.12/Python-3.7.12.tgz
+tar -xf Python-3.7.12.tgz
+cd /Python-3.7.12
+./configure --enable-optimizations
+make -j $(nproc)
+
+```
