@@ -1,4 +1,4 @@
-# docker_assignment
+# Docker Task
 1. Initially, DAG is created with a schedule of timedelta days equal to 1.
 2. Three tasks are created which creates, inserts and run a query in postgres.
 3. The first task was named createtable_task which creates a table in postgres.
