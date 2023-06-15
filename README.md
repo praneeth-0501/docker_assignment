@@ -41,5 +41,6 @@ make altinstall
 apt-get install libpq-dev
 pip3.7 install "apache-airflow[postgres]==2.5.0" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.5.0/constraints-3.7.txt"
 airflow db init
+export AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql://airflow:airflow@localhost:5432/airflow
 airflow users create -u airflow -p airflow -f praneeth -l praneeth -e praneeth@gmail.com -r Admin
 ```
