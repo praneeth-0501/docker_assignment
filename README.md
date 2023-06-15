@@ -44,3 +44,30 @@ export AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql://airflow:airflow@localhos
 airflow db init
 airflow users create -u airflow -p airflow -f praneeth -l praneeth -e praneeth@gmail.com -r Admin
 ```
+4. Once above installations are completed create a postgres service by running below command.
+```
+kubectl apply -f postgresdb-service.yaml
+```
+5. Create a pod for airflow by using airflow-deploy.yaml file. By running below kube command we can create a pod.
+```
+kubectl apply -f airflow-deploy.yaml 
+```
+6. Now create a service for above created pod using airflow-service.yaml file and running below command.
+```
+kubectl apply -f airflow-service.yaml
+```
+<img width="752" alt="Screenshot 2023-06-15 at 3 37 34 PM" src="https://github.com/praneeth-0501/docker_assignment/assets/123532043/d819e0c0-6bd3-4153-8e3f-e292c446cd92">
+7. Create a dag in airflow scheduler container.
+```
+minikube ssh
+docker exec -it -u root < airflow scheduler Id > /bin/bash
+cd dags
+apt-get update
+apt install vim
+```
+8. Create dag and sql files required to run a dag (copy same code from docker assignment).
+9. Run ```minikube service airflow``` it opens the airflow-webui. In webui create a connection for postgres as shown below.
+<img width="1428" alt="Screenshot 2023-06-15 at 3 54 04 PM" src="https://github.com/praneeth-0501/docker_assignment/assets/123532043/3ccc2f24-4ba8-4001-b573-8631b39522b7">
+10. Now trigger the postgres_dag from the webui and validate the entry.
+<img width="1434" alt="Screenshot 2023-06-15 at 3 52 04 PM" src="https://github.com/praneeth-0501/docker_assignment/assets/123532043/da06ac5a-6a90-4903-a90e-fcaac68dbbbe">
+
