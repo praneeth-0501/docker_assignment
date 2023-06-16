@@ -1,0 +1,29 @@
+[2023-06-13 06:21:07,990] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: postgres_dag.insert_rows_task manual__2023-06-13T06:21:04.964305+00:00 [queued]>
+[2023-06-13 06:21:08,000] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: postgres_dag.insert_rows_task manual__2023-06-13T06:21:04.964305+00:00 [queued]>
+[2023-06-13 06:21:08,000] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-13 06:21:08,001] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2023-06-13 06:21:08,002] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-13 06:21:08,015] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): insert_rows_task> on 2023-06-13 06:21:04.964305+00:00
+[2023-06-13 06:21:08,018] {standard_task_runner.py:52} INFO - Started process 417 to run task
+[2023-06-13 06:21:08,021] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'postgres_dag', 'insert_rows_task', 'manual__2023-06-13T06:21:04.964305+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/postgres_dag.py', '--cfg-path', '/tmp/tmpy8venzea', '--error-file', '/tmp/tmp1_ylti1l']
+[2023-06-13 06:21:08,022] {standard_task_runner.py:80} INFO - Job 6: Subtask insert_rows_task
+[2023-06-13 06:21:08,074] {task_command.py:370} INFO - Running <TaskInstance: postgres_dag.insert_rows_task manual__2023-06-13T06:21:04.964305+00:00 [running]> on host 4be482cb65ef
+[2023-06-13 06:21:08,168] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=postgres_dag
+AIRFLOW_CTX_TASK_ID=insert_rows_task
+AIRFLOW_CTX_EXECUTION_DATE=2023-06-13T06:21:04.964305+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-06-13T06:21:04.964305+00:00
+[2023-06-13 06:21:08,185] {base.py:68} INFO - Using connection ID 'postgre_assign' for task execution.
+[2023-06-13 06:21:08,195] {dbapi.py:213} INFO - Running statement: insert into employee 
+values ('praneeth','kothapally', 'TAS-143', 'sigmoid'),
+('srinivas','mogula', 'TAS-148', 'sigmoid'),
+('mohan','gunguri', 'TAS-150', 'sigmoid'),
+('srinivas','chakri', 'TAS-154', 'sigmoid');, parameters: None
+[2023-06-13 06:21:08,198] {dbapi.py:221} INFO - Rows affected: 4
+[2023-06-13 06:21:08,234] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=postgres_dag, task_id=insert_rows_task, execution_date=20230613T062104, start_date=20230613T062107, end_date=20230613T062108
+[2023-06-13 06:21:08,285] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-06-13 06:21:08,319] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

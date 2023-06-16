@@ -1,0 +1,25 @@
+[2023-06-16 12:37:15,121] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: postgres_dag.query_task manual__2023-06-16T12:37:12.918270+00:00 [queued]>
+[2023-06-16 12:37:15,127] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: postgres_dag.query_task manual__2023-06-16T12:37:12.918270+00:00 [queued]>
+[2023-06-16 12:37:15,127] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-16 12:37:15,128] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2023-06-16 12:37:15,128] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-16 12:37:15,135] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): query_task> on 2023-06-16 12:37:12.918270+00:00
+[2023-06-16 12:37:15,139] {standard_task_runner.py:52} INFO - Started process 1633 to run task
+[2023-06-16 12:37:15,142] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'postgres_dag', 'query_task', 'manual__2023-06-16T12:37:12.918270+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/postgres_dag.py', '--cfg-path', '/tmp/tmp6b550ge4', '--error-file', '/tmp/tmp6cyp_zvz']
+[2023-06-16 12:37:15,142] {standard_task_runner.py:80} INFO - Job 13: Subtask query_task
+[2023-06-16 12:37:15,182] {task_command.py:370} INFO - Running <TaskInstance: postgres_dag.query_task manual__2023-06-16T12:37:12.918270+00:00 [running]> on host f97be8e8a009
+[2023-06-16 12:37:15,226] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=postgres_dag
+AIRFLOW_CTX_TASK_ID=query_task
+AIRFLOW_CTX_EXECUTION_DATE=2023-06-16T12:37:12.918270+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-06-16T12:37:12.918270+00:00
+[2023-06-16 12:37:15,234] {base.py:68} INFO - Using connection ID 'postgre_assign' for task execution.
+[2023-06-16 12:37:15,239] {dbapi.py:213} INFO - Running statement: select * from execution;, parameters: None
+[2023-06-16 12:37:15,240] {dbapi.py:221} INFO - Rows affected: 3
+[2023-06-16 12:37:15,250] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=postgres_dag, task_id=query_task, execution_date=20230616T123712, start_date=20230616T123715, end_date=20230616T123715
+[2023-06-16 12:37:15,274] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-06-16 12:37:15,296] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

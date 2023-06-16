@@ -1,0 +1,1 @@
+INSERT INTO execution (exectime) VALUES (CURRENT_TIMESTAMP);
