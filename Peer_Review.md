@@ -13,7 +13,7 @@
 2. By using the Kubectl command he deployed the Postgres pod.
 3. Then he started Postgres service.
 4. Then he deployed the airflow pod and started the airflow service.
-5. Now he created a dag in an airflow container.
+5. Now he created a dag in an airflow scheduler container.
 6. Triggered the dag in Webui.
 
 # Srinivas Review
@@ -32,5 +32,5 @@
 3. Then he installed all the requirements in the Postgres container.
 4. Then he started Postgres service.
 4. Then he deployed the airflow pod and started the airflow service.
-5. Now he created dag in an airflow container.
+5. Now he created dag in an airflow scheduler container.
 6. Triggered the dag in Webui.
