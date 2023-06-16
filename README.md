@@ -17,7 +17,8 @@ docker-compose up -d
 
 9. You can validate the entry by checking in postgres container also.
    
-<img width="355" alt="Screenshot 2023-06-16 at 4 06 07 PM" src="https://github.com/praneeth-0501/docker_assignment/assets/123532043/e087a911-e43c-4322-940e-92946db160f3">
+<img width="470" alt="Screenshot 2023-06-16 at 6 07 48 PM" src="https://github.com/praneeth-0501/docker_assignment/assets/123532043/502d5083-9774-44c7-a8cb-0d866e557030">
+
 
 
 # Kubernetes task
