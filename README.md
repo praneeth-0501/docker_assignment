@@ -9,13 +9,16 @@
 docker-compose up -d
 ```
 7. Open the web-UI. In connections create a postgres connection as shown below.
-<img width="1419" alt="Screenshot 2023-06-13 at 11 57 55 AM" src="https://github.com/praneeth-0501/docker_assignment/assets/123532043/6eb65ce4-9561-4b21-947f-1bc618ee783d">
+ <img width="1162" alt="Screenshot 2023-06-16 at 4 04 29 PM" src="https://github.com/praneeth-0501/docker_assignment/assets/123532043/a03adfd5-c70c-4c1d-a227-8ff97213adf4">
+
 8. Once connection is created trigger the above created dag.
-<img width="965" alt="Screenshot 2023-06-13 at 11 58 23 AM" src="https://github.com/praneeth-0501/docker_assignment/assets/123532043/58ddf97f-a1d8-4ce6-80ae-92533e18066e">
+
+<img width="1159" alt="Screenshot 2023-06-16 at 4 05 18 PM" src="https://github.com/praneeth-0501/docker_assignment/assets/123532043/031df86b-dc2c-4351-88bb-3c920a58ac3a">
 
 9. You can validate the entry by checking in postgres container also.
+   
+<img width="355" alt="Screenshot 2023-06-16 at 4 06 07 PM" src="https://github.com/praneeth-0501/docker_assignment/assets/123532043/e087a911-e43c-4322-940e-92946db160f3">
 
-<img width="461" alt="Screenshot 2023-06-13 at 12 01 11 PM" src="https://github.com/praneeth-0501/docker_assignment/assets/123532043/cd4c5407-d329-4bfe-acc1-75278acc082c">
 
 # Kubernetes task
 1. Initially create a yaml file for deployment of postgres container. Here, postgres pod is created with 1 replica and considering latest postgres image.
@@ -56,7 +59,7 @@ kubectl apply -f airflow-deploy.yaml
 ```
 kubectl apply -f airflow-service.yaml
 ```
-<img width="752" alt="Screenshot 2023-06-15 at 3 37 34 PM" src="https://github.com/praneeth-0501/docker_assignment/assets/123532043/d819e0c0-6bd3-4153-8e3f-e292c446cd92">
+
 
 7. Create a dag in airflow scheduler container.
 ```
@@ -69,11 +72,10 @@ apt install vim
 
 8. Create dag and sql files required to run a dag (copy same code from docker assignment).
    
-9. Run ```minikube service airflow``` it opens the airflow-webui. In webui create a connection for postgres as shown below.
-    
-<img width="1428" alt="Screenshot 2023-06-15 at 3 54 04 PM" src="https://github.com/praneeth-0501/docker_assignment/assets/123532043/3ccc2f24-4ba8-4001-b573-8631b39522b7">
+9. Run ```minikube service airflow``` it opens the airflow-webui. In webui create a connection for postgres as did in above task.
+
 
 10. Now trigger the postgres_dag from the webui and validate the entry.
     
-<img width="1434" alt="Screenshot 2023-06-15 at 3 52 04 PM" src="https://github.com/praneeth-0501/docker_assignment/assets/123532043/da06ac5a-6a90-4903-a90e-fcaac68dbbbe">
+<img width="452" alt="Screenshot 2023-06-16 at 4 08 47 PM" src="https://github.com/praneeth-0501/docker_assignment/assets/123532043/b3863e2d-f911-4e39-8e12-7ba5723a44fa">
 
